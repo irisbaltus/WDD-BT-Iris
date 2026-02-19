@@ -1,0 +1,143 @@
+:root{
+    --font-roboto:'Roboto-regular',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-roboto-bold:'Roboto-bold',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --color-text-headings: #0A3681;
+    --color-ns-yellow: #FED753;
+    --color-background: #f3f5f9;
+    --color-background-form:#fff;
+    --color-background-button: #f3f5f9;
+    --margin-width: min(3vw, .5rem);
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
+body{
+    font-family: var(--font-roboto);
+    background-color: var(--color-background);
+    
+}
+main{
+    margin: var(--margin-width);
+    transform: translateY(10%);
+}
+
+header{
+    background-color: var(--color-ns-yellow);
+    padding: calc(2 * var(--margin-width));
+    position: fixed;
+    inset: 0 0 90% 0;
+}
+
+h1{
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+h1, h2{
+    color: var(--color-text-headings);
+    font-weight: 400;
+    font-family: var(--font-roboto-bold);
+}
+
+.legend-header{
+    font-size: 1.5em;
+    color: var(--color-text-headings);
+}
+/* .closed{
+    display: none;
+} */
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.closed,
+.fs-1c,
+.fs-1b-02, .fs-1b-03, .fs-1b-04,
+.fs-1d, 
+.fs-1c-02, .fs-1c-02, .fs-1c-03
+.fs-1d-02{
+    display: none;
+}
+
+/* } by default, want speciefiekere css code  */
+.fs-1b:has(#married01-no:checked) ~ .fs-1c, 
+.fs-1b-01:has(#married01-yes:checked) ~ .fs-1b-02,
+.fs-1b-01:has(#married01-yes:checked) ~  .fs-1b-03, 
+.fs-1b-01:has(#married01-yes:checked) ~ .fs-1b-04{
+    background-color: #6c92d3;
+    display: block;
+}
+/* uitleg gekregen van Victor */
+
+.fs-1c:has(#kids01-no:checked) ~ .fs-1d,
+.fs-1c-01:has(#kids01-yes:checked) ~ .fs-1c-02,
+.fs-1c-01:has(#kids01-yes:checked) ~ .fs-1c-03{
+    background-color: #6c92d3;
+    display: block;
+}
+
+.fs-1d:has(#testament-01-no:checked) ~ .fs-1d,
+.fs-1d-01:has(#testament-01-yes:checked) ~ .fs-1d-02{
+    background-color: #6c92d3;
+    display: block;
+}
+
+.fs-1a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 55vh;
+}
+.fs-1a label{
+    display: flex;
+    flex-direction: column;
+    margin: .3em;
+    gap: .2em;
+}
+button{
+    width: 6em;
+    
+}
+input{
+    background-color: var(--color-background-button);
+    border: none;
+    border-radius: .3em;
+    height: 1.5em;
+    filter: drop-shadow(1px 1px 2px #aaaeb5);
+
+}
+fieldset{
+    background-color: var(--color-background-form);
+    border: none;
+    border-radius: 1em;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+
+
+
+/* .fs-1b-01:has(#married01-yes:checked) ~ .closed{
+    display: block;
+}  */
+/* } .showm gaat om de eerste vraag in de fieldset */

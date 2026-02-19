@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erfbelasting</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dit is een school project! </h1>
+    </header>
+    <main>
+
+        <form action="">
+            <h2>Aangifte erfbelasting</h2>
+
+            <fieldset id="1a" class="fs-1a">
+                <legend class="legend-header">Gegevens overledene</legend>
+                    <label for="voornaam">
+                        Voorletter(s)
+                        <input required type="text" id="voornaam">
+                    </label>
+                    <label for="tussen-voegsel">
+                        Tussen-voegsel(s)
+                        <input required type="text" id="tussen-voegsel">
+                    </label>
+                    <label for="name">
+                        Achternaam
+                        <input required type="text" id="achternaam">
+                    </label>
+                    
+               
+                     <label for="bsn">
+                        Bsn overledene
+                        <input required type="number" minlength="9" maxlength="9" id="bsn">
+                    </label>
+                    <label for="overlijdensdatum">
+                        Overlijdensdatum
+                        <input required type="number" minlength="9" maxlength="9" id="overlijdensdatum">
+                    </label>
+
+                    <!-- <button type="button">Volgende</button> -->
+                  
+            </fieldset>
+
+            <fieldset id="" class="fs-1b">
+                <legend class="legend-header">1b</legend>
+
+                <fieldset class="fs-1b-01">
+                    <legend>
+                        Was de overledene getrouwd of had de overledene een
+geregistreerde partner op het moment van overlijden?  
+                    </legend>
+
+                <div class="checkbox">
+                     <label for="married01-no">
+                        <input required type="radio" name="married" id="married01-no">
+                        Nee. Ga verder met vraag 1c.    
+                    </label>
+
+                    <label for="married01-yes">
+                        <input required type="radio" name="married" id="married01-yes">
+                        Ja      
+                    </label>
+
+                    
+                </div>
+                </fieldset>
+               
+
+                <fieldset class="fs-1b-02">
+                    <legend>
+                        Hadden de overledene en diens echtgenoot of
+geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?  
+                    </legend>
+
+                     <div class="checkbox">  
+                        <label for="married02">
+                            <input type="radio" name="married" id="married02">
+                            Nee. Ga verder met vraag 1c.    
+                        </label>
+
+                        <label for="married02">
+                            <input type="radio" name="married" id="married02">
+                            Ja. Stuur een kopie van de akte mee met de aangifte     
+                        </label>
+                    </div>
+                </fieldset>
+   
+
+                <fieldset class="fs-1b-03">
+                    <legend>
+                        Hadden de overledene en diens partner een finaal
+verrekenbeding?         
+                    </legend>
+
+                    <div class="checkbox">
+                        <label for="married03">
+                            <input type="radio" name="married" id="married03">
+                            Nee   
+                        </label>
+
+                        <label for="married03">
+                            <input type="radio" name="married" id="married03">
+                            Ja     
+                        </label>
+                    </div>
+                </fieldset>
+
+                
+                 <label class="fs-1b-04" for="married04">
+                    Datum huwelijkse of partnerschapsvoorwaarden 
+                    <input type="date" id="married04">   
+                </label> 
+
+                <button type="button">Volgende</button>
+                
+             </fieldset>
+                
+
+            <fieldset class="fs-1c">
+                <legend class="legend-header">1c</legend>
+
+                <fieldset class="fs-1c-01">
+                    <legend>Had de overledene kinderen?</legend>
+                
+                    <div class="checkbox">
+                        <label for="kids01">
+                            <input type="radio" name="kids" id="kids01-no">
+                            Nee. ga verder met vraag 1d.   
+                        </label>
+
+                        <label for="kids01">
+                            <input type="radio" name="kids" id="kids01-yes">
+                            Ja     
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="fs-1c-02">
+                    <legend>Is 1 van deze kinderen eerder overleden dan de
+overledene voor wie u nu aangifte doet?</legend>
+
+                    <div class="checkbox">
+                        <label for="kids02">
+                            <input type="radio" name="kids" id="kids01">
+                            Nee. ga verder met vraag 1d.   
+                        </label>
+
+                        <label for="kids02">
+                            <input type="radio" name="kids" id="kids02">
+                            Ja     
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="fs-1c-03">
+                    <legend>Had dit overleden kind zelf kinderen?</legend>
+       
+                    <div class="checkbox">
+                        <label for="kids03">
+                            <input type="radio" name="kids" id="kids03">
+                            Nee  
+                        </label>
+
+                        <label for="kids03">
+                            <input type="radio" name="kids" id="kids03">
+                            Ja     
+                        </label>
+                    </div>
+                    <button type="button">Volgende</button>
+                </fieldset>
+
+            </fieldset>
+
+            <fieldset class="fs-1d">
+                <legend class="legend-header">1d</legend>
+
+                <fieldset class="fs-1d-01">
+                    <legend>Had de overledene een testament?</legend>
+
+                    <div class="checkbox">
+                        <label for="testament01-no">
+                            <input type="radio" name="testament01" id="testament01-no">
+
+                            Nee. Ga verder met vraag 2.  
+                        </label>
+
+                        <label for="testament01-yes">
+                            <input type="radio" name="testament01" id="testament01-yes">
+                            Ja. Vul de gegevens in van de notaris die het testament heeft opgemaakt en de datum van het testament.    
+                        </label>
+                    </div>
+                    
+                </fieldset>
+       
+                    <label class="fs-1d-02" for="">
+                        Protocolnummer notaris
+                        <input type="number" minlength="6" maxlength="6">
+                    </label>
+
+                    <div class="fs-1d-02" class="name">
+                        <label for="name-notaris">
+                            Voorletter(s)
+                            <input type="text" id="name-notaris">
+                        </label>
+
+                        <label class="fs-1d-02" for="name-notaris">
+                            tussen-voegsel(s)
+                            <input type="text" id="name-notaris">
+                        </label>
+
+                        <label class="fs-1d-02" for="name-notaris">
+                            Achternaam
+                            <input type="text" id="name-notaris">   
+                        </label>
+                    </div>
+                    
+
+                    <label class="fs-1d-02" for="">
+                        Vestigingsplaats
+                        <input type="text">
+                    </label>
+
+                    <label class="fs-1d-02" for="">
+                        Datum van het testament of van de laatste wijziging
+                        <input type="date">
+                    </label>
+
+                    <label class="fs-1d-02" for="">
+                        Vul hier het bsn van de overledene in.
+                        <input type="numbers">
+                    </label>
+              
+                    <button type="button">Volgende</button>
+            </fieldset>
+
+
+        </form>
+
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
